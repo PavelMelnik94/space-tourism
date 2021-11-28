@@ -9,9 +9,9 @@ const FadeInDiv = styled.div`
 `;
 
 
-function Main({children}) {
+function Main({className,children}) {
     return (
-        <FadeInDiv id="style-1 wow-effect" className="main  " >
+        <FadeInDiv id="style-1 wow-effect" className={`main ${className}`} >
         {children}
       </FadeInDiv>
     )

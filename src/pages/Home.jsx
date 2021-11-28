@@ -8,7 +8,7 @@ function Home({ children }) {
     <>
       <div className="home">
         {children}
-        <Main>
+        <Main className='padding-home'>
           <div className="home__holder">
             <div className="home__holder-content">
               <h5 className="home__holder-content--supheader">
