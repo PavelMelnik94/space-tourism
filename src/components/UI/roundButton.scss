@@ -1,0 +1,50 @@
+.round-button {
+  height: 274px;
+  width: 274px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  background-color: var(--color-elephant-bone);
+  cursor: pointer;
+  position: relative;
+
+  h4 {
+    color: var(--color-navy-blue);
+  }
+  &__border {
+    position: absolute;
+    height: 274px;
+    width: 274px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: var(--color-elephant-bone);
+    cursor: pointer;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+    &:hover {
+      height: 450px;
+      width: 450px;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    height: 274px;
+    width: 274px;
+  }
+  100% {
+    height: 450px;
+    width: 450px;
+  }
+}
