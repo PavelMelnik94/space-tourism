@@ -31,9 +31,12 @@
     height: 96px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
-    // width: 100%;
+    padding-right: 165px;
     a {
       width: 100%;
+      &:last-child {
+        margin-right: -70px;
+      }
     }
     &-btn {
       //   width: 85px;
@@ -43,6 +46,7 @@
       flex-direction: row;
       justify-content: space-between;
       margin-right: 70px;
+      
       &_digit,
       &_title {
         font-family: var(--font-second);

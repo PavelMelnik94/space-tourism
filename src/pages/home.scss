@@ -5,21 +5,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    .home-container {
-        // 
-    }
+    padding: 0;
+
     &__holder {
-        // margin-top: 251px;
-        position: absolute;
-        bottom: 0;
         height: 300px;
-        // width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 131px;
+        align-items: flex-end;
+        // margin-bottom: 131px;
         &-content {
             width: 450px;
-            margin-right: 386px;
         }
         &-button {
 
