@@ -5,7 +5,8 @@ h4,
 h5,
 .subhead-h1,
 .subheader-h2,
-.nav-text {
+.nav-text,
+.distance {
   text-transform: uppercase;
 }
 
@@ -29,7 +30,6 @@ h2 {
 
 //Heading 3 - Bellefair Regular - 56px
 h3 {
-
   color: var(--color-elephant-bone);
 
   font-family: var(--font-basic);
@@ -38,7 +38,6 @@ h3 {
 }
 //Heading 4 - Bellefair Regular - 32px
 h4 {
-
   color: var(--color-elephant-bone);
 
   font-family: var(--font-basic);
@@ -92,4 +91,12 @@ h5 {
   font-family: var(--font-second);
   font-size: var(--text-basic);
   line-height: 32px;
+}
+
+.distance {
+  font-family: var(--font-second);
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
 }
