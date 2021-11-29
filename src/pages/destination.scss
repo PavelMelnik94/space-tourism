@@ -3,16 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  &__header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    &-number {
-      mix-blend-mode: normal;
-      opacity: 0.25;
-      margin-right: 25px;
-    }
-  }
+
   &__content {
     margin-top: 30px;
     // width: 1050px;

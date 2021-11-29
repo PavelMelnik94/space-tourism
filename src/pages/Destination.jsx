@@ -40,12 +40,12 @@ function Destination({ children }) {
     <div className="destination">
       {children}
       <Main className="padding-destination">
-        <div className="destination__header ">
-          <h5 className="destination__header-number">01</h5>
+        <div className="content-header">
+          <h5 className="content-header--number">01</h5>
           <h5>Pick your destination</h5>
         </div>
 
-        <div className="destination__content ">
+        <div className="content ">
           <img
             src={
               planetInfo.name === "Moon"

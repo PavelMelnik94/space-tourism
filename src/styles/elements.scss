@@ -1,3 +1,48 @@
 .tab-nav-item {
   font-size: 20px;
 }
+
+.content-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &--number {
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    margin-right: 25px;
+  }
+}
+
+.content {
+  margin-top: 30px;
+  // width: 1050px;
+  height: 472px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-navigation {
+  margin-top: 120px;
+  width: 132px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_dot {
+    width: 15px;
+    height: 100%;
+    border-radius: 100%;
+    background-color: var(--color-elephant-bone);
+    mix-blend-mode: normal;
+    opacity: 0.17;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.dot-active {
+  background-color: var(--color-elephant-bone);
+  opacity: 1;
+}

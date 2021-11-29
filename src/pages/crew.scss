@@ -1,0 +1,37 @@
+.crew {
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  &-slider {
+    margin-top: 155px;
+    width: 488px;
+    &__supheader {
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    &__text {
+    }
+    &__nav {
+      &_dot {
+        width: 15px;
+        height: 100%;
+        border-radius: 100%;
+        background-color: var(--color-elephant-bone);
+        mix-blend-mode: normal;
+        opacity: 0.17;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    width: 568.07px;
+    height: 712px;
+    right: 130px;
+    bottom: 0;
+  }
+}
+
+.padding-crew {
+  margin-top: 130px;
+}
