@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Main from "../components/Main/Main";
 import data from "./../json/data";
 import "./destination.scss";

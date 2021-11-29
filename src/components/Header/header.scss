@@ -23,7 +23,7 @@
     -moz-transform: translateX(50px);
     -ms-transform: translateX(50px);
     -o-transform: translateX(50px);
-}
+  }
   &__nav {
     padding-left: 123px;
     width: 100%;
@@ -33,7 +33,7 @@
     backdrop-filter: blur(81.5485px);
     padding-right: 165px;
     a {
-      width: 100%;
+      // width: 100%;
       &:last-child {
         margin-right: -70px;
       }
@@ -44,9 +44,9 @@
       height: 57px;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      // justify-content: space-between;
       margin-right: 70px;
-      
+
       &_digit,
       &_title {
         font-family: var(--font-second);
