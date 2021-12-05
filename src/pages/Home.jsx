@@ -4,6 +4,7 @@ import RoundButton from "../components/UI/RoundButton";
 import "./home.scss";
 
 function Home({ children }) {
+
   return (
     <>
       <div className="home">

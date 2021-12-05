@@ -20,8 +20,10 @@ const [isOpen, setOpen] = useState(false)
 let detectMobile = window.screen.width
 console.log(mobile)
 useEffect(() => {
-  if (detectMobile <= 575 || detectMobile >= 320 ) {
+  if (detectMobile < 575  ) {
     setMobile(true)
+  } else {
+    setMobile(false)
   }
   
   
@@ -30,7 +32,7 @@ useEffect(() => {
 
 if (mobile) {
  return (
- <>
+ <div className="mobile-menu">
    <div className="header-mobile-wrapper">
      <img src={logo} alt="space toutism logo" />
      <div className="hamburger">
@@ -38,7 +40,7 @@ if (mobile) {
        </div>
    </div>
 
-   <div className="hamburger-menu-wrapper"> 
+   <div className={`hamburger-menu-wrapper ${isOpen ? ' ' : 'hidden' }`}> 
     <div className="hamburger-menu"> 
     {btnConstructor.map((btn) => (
             <Link key={btn.id} to={btn.url}>
@@ -50,7 +52,7 @@ if (mobile) {
           ))}
      </div>
    </div>
-   </>
+   </div>
  )
 } else {
   return (
