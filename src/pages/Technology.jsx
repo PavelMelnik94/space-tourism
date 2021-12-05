@@ -16,7 +16,7 @@ const slides = [
 function Technology({ children }) {
   const res = data;
   const technologyPage = res.technology;
-
+// eslint-disable-next-line
   const [technologyAll, setTechnologyAll] = useState(technologyPage);
   const [technology, setTechnology] = useState({
     name: "Launch vehicle",

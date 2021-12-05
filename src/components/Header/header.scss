@@ -74,6 +74,9 @@
       }
     }
   }
+  @media (max-width: 574px)  {
+    display: none;
+  }
 }
 
 .active {
@@ -85,4 +88,36 @@
     background-color: var(--color-elephant-bone);
     bottom: 0;
   }
+}
+
+
+.header-mobile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px 0;
+}
+
+.hamburger-menu-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 70%;
+  backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 100000;
+  .hamburger-menu {
+    padding: 118px 35px 0;
+    &__item {
+      display: flex;
+      flex-direction: row;
+      
+    }
+  }
+}
+
+.hamburger {
+
+  z-index: 10000000000;
 }

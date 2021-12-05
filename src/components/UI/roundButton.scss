@@ -36,15 +36,36 @@
       width: 450px;
     }
   }
+  @media (max-width: 574px) {
+    height: 124px;
+    width: 124px;
+    h4 {
+      font-size: 22px;
+    }
+    &__border {
+      height: 124px;
+      width: 124px;
+      animation: pulse 3s ease-in-out infinite ;
+      -webkit-animation: pulse 3s ease-in-out infinite ;
+}
+    &:hover {
+      height: 124px;
+      width: 124px;
+    }
+  }
 }
 
 @keyframes pulse {
   0% {
-    height: 274px;
-    width: 274px;
+    height: 124px;
+    width: 124px;
+  }
+  50% {
+    height: 174px;
+    width: 174px;
   }
   100% {
-    height: 450px;
-    width: 450px;
+    height: 124px;
+    width: 124px;
   }
 }

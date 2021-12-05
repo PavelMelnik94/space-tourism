@@ -17,6 +17,9 @@ h1 {
   font-family: var(--font-basic);
   font-size: var(--text-size-h1);
   line-height: 172px;
+  @media (max-width: 574px) {
+    line-height: 100px;
+  }
 }
 
 //Heading 2 - Bellefair Regular - 100px
@@ -54,6 +57,10 @@ h5 {
   font-family: var(--font-second);
   font-size: 28px;
   line-height: 34px;
+  @media (max-width: 574px) {
+    font-size: 16px;
+line-height: 19px;
+  }
 }
 
 //Subheading 1 - Bellefair Regular - 28px

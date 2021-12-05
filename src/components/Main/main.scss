@@ -5,4 +5,10 @@
 // padding-right: calc(55px + 48px + 50px);
 margin: 0 auto;
 padding: 0 150px 130px;
+@media (max-width: 574px) {
+  padding: 0 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }

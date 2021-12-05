@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Main from "../components/Main/Main";
 import data from "./../json/data";
 import Douglas from "./../assets/crew/image-douglas-hurley.png";
@@ -17,7 +17,7 @@ const slides = [
 function Crew({ children }) {
   const res = data;
   const crewPage = res.crew;
-
+  // eslint-disable-next-line
   const [crew, setCrew] = useState(crewPage);
   const [member, setMember] = useState({
     name: "Douglas Hurley",

@@ -16,4 +16,14 @@
   --text-size-subhead-2: 14px;
   --text-navigation: 16px;
   --text-basic: 18px;
+  @media (max-width: 574px) {
+    --text-size-h1: 80px;
+    --text-size-h2: 100px;
+    --text-size-h3: 56px;
+    --text-size-h4: 32px;
+    --text-size-subhead-1: 28px;
+    --text-size-subhead-2: 14px;
+    --text-navigation: 16px;
+    --text-basic: 15px;
+  }
 }
