@@ -18,9 +18,11 @@ const [mobile, setMobile] = useState(false);
 const [isOpen, setOpen] = useState(false)
 
 let detectMobile = window.screen.width
-console.log(mobile)
+
+
 useEffect(() => {
   if (detectMobile < 575  ) {
+
     setMobile(true)
   } else {
     setMobile(false)

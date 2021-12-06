@@ -44,11 +44,11 @@ function Crew({ children }) {
         </div>
 
         <div className="content padding-crew">
-          <div className="crew-slider">
+          <div id='slider' className="crew-slider">
             <h4 className="crew-slider__supheader">{member.role}</h4>
             <h3 className="crew-slider__header">{member.name}</h3>
             <p className="crew-slider__text text-basic">{member.bio}</p>
-            <div className="slider-navigation">
+            <div id='navigation' className="slider-navigation">
               {slides.map((slide) => (
                 <span
                   key={slide.id}
@@ -61,7 +61,7 @@ function Crew({ children }) {
               ))}
             </div>
           </div>
-          <img
+          <img id='hero'
             src={
               member.name === "Douglas Hurley"
                 ? Douglas

@@ -30,8 +30,75 @@
     right: 130px;
     bottom: 0;
   }
+  @media (max-width: 574px) {
+    overflow: auto;
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+    &-slider {
+      margin-top: 0;
+      width: auto;
+      text-align: center;
+      &__supheader {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__text {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 25px;
+        height: 114px;
+      }
+      &__header {
+        margin-top: 10px;
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+    .content {
+
+      position: relative;
+      display: grid;
+      align-content: space-between;
+      justify-items: center;
+      // grid-template-columns: auto;
+      // grid-template-rows: 100px ;
+      grid-template-areas:
+        "hero"
+        "navigation"
+        "slider";
+    }
+    &__image {
+      width: 177.12px;
+      height: 222px;
+      position: initial;
+      display: block;
+      margin: 0 auto;
+    }
+    #slider {
+      grid-area: slider;
+    }
+    #slider-img {
+      
+      grid-area: hero;
+    }
+    #navigation {
+      margin-top: 0;
+      margin: 0 auto;
+      position: absolute;
+      top: calc(222px + 35px);
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+}
+  }
 }
 
 .padding-crew {
   margin-top: 130px;
+  @media (max-width: 574px) {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
 }
