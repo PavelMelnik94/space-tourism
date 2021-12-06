@@ -11,6 +11,10 @@
     opacity: 0.25;
     margin-right: 25px;
   }
+  @media (max-width: 574px) {
+    margin-bottom: 25px;
+   }
+
 }
 
 .content {
@@ -27,6 +31,7 @@
 
     .technology-slider__content {
     width: 316px;
+    margin-top: 270px;
     transform: translateX(33%);
     -webkit-transform: translateX(33%);
     -moz-transform: translateX(33%);
@@ -39,7 +44,13 @@
       width: 152px;
       top: 330px;
       left: 100px;
-      &--btn {
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      &--btn{
         height: 40px;
         width: 40px;
       }
