@@ -19,6 +19,32 @@
   height: 472px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 574px) {
+    margin: 0;
+    height: auto;
+    flex-direction: column;
+    padding: 0;
+
+    .technology-slider__content {
+    width: 316px;
+    transform: translateX(33%);
+    -webkit-transform: translateX(33%);
+    -moz-transform: translateX(33%);
+    -ms-transform: translateX(33%);
+    -o-transform: translateX(33%);
+}
+    .technology-slider__nav {
+      position: absolute;
+      flex-direction: row;
+      width: 152px;
+      top: 330px;
+      left: 100px;
+      &--btn {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
 }
 
 .slider-navigation {
