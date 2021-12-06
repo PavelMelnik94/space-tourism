@@ -23,8 +23,8 @@
     background-image: url(./../assets/home/background-home-mobile.jpg);
     background-position: center;
     overflow: hidden;
-    transition: all 20s ease;
-    animation: levitate 20s ease infinite;
+    transition: all 10s ease;
+    animation: levitate 10s ease infinite;
     &__holder {
       flex-direction: column;
       align-items: center;
@@ -55,17 +55,15 @@
   }
   40% {
     padding-bottom: 0;
-    padding-right: 10px;
   }
   60% {
-    padding-right: 0;
-    padding-left: 10px;
-  }
-  40% {
-    padding-left: 0;
-  }
-  40% {
     padding-top: 10px;
+  }
+  40% {
+    padding-top: 0px;
+  }
+  40% {
+    padding-bottom: 10px;
   }
   100% {
     padding: 0;
