@@ -61,6 +61,7 @@ function Crew({ children }) {
               ))}
             </div>
           </div>
+          <div>
           <img id='hero'
             src={
               member.name === "Douglas Hurley"
@@ -74,6 +75,8 @@ function Crew({ children }) {
             alt="crew"
             className="crew__image"
           />
+          <hr className='crew__image_divider' />
+          </div>
         </div>
       </Main>
     </div>
