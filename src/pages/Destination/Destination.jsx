@@ -6,6 +6,10 @@ import Mars from "./../../assets/destination/image-mars.png";
 import Moon from "./../../assets/destination/image-moon.png";
 import Titan from "./../../assets/destination/image-titan.png";
 import Europa from "./../../assets/destination/image-europa.png";
+import H5 from "../../components/UI/H5/H5";
+import H2 from "../../components/UI/H2/H2";
+import Text from "../../components/UI/Text/Text";
+import H4 from "../../components/UI/H4/H4";
 
 const tabs = [
   { id: 1, name: "Moon" },
@@ -43,8 +47,8 @@ function Destination({ children }) {
       {children}
       <Main className="padding-destination">
         <div className="content-header">
-          <h5 className="content-header--number">01</h5>
-          <h5>Pick your destination</h5>
+          <H5 className="content-header--number">01</H5>
+          <H5>Pick your destination</H5>
         </div>
 
         <div className="content ">
@@ -70,21 +74,21 @@ function Destination({ children }) {
                     tab.name === planetInfo.name && "active"
                   }`}
                 >
-                  <h5
+                  <H5
                     onClick={(e) => handle.getPlanet(e)}
                     className="tab-nav-item"
                   >
                     {tab.name}
-                  </h5>
+                  </H5>
                 </span>
               ))}
             </div>
 
-            <h2 className="destination__content__tab__planet-name">
+            <H2 className="destination__content__tab__planet-name">
               {planetInfo.name}
-            </h2>
+            </H2>
 
-            <p className="text-basic">{planetInfo.description}</p>
+            <Text >{planetInfo.description}</Text>
 
             <hr />
             <div className="destination__content__tab__distance j4">
@@ -92,18 +96,18 @@ function Destination({ children }) {
                 <span className="destination__content__tab__distance-supheader distance ">
                   AVG. DISTANCE
                 </span>
-                <h4 className="destination__content__tab__distance-info">
+                <H4 className="destination__content__tab__distance-info">
                   {planetInfo.distance}
-                </h4>
+                </H4>
               </div>
 
               <div className="destination__content__tab__distance__holder">
                 <span className="destination__content__tab__distance-supheader distance ">
                   Est. travel time
                 </span>
-                <h4 className="destination__content__tab__distance-info">
+                <H4 className="destination__content__tab__distance-info">
                   {planetInfo.travel}
-                </h4>
+                </H4>
               </div>
             </div>
           </div>
