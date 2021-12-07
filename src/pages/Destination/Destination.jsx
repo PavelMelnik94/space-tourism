@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+
+import Text from "../../components/UI/Text/Text";
 import Main from "../../components/Main/Main";
-import data from "./../../json/data";
-import "./destination.scss";
+import H5 from "../../components/UI/H5/H5";
+import H4 from "../../components/UI/H4/H4";
+import H2 from "../../components/UI/H2/H2";
+
 import Mars from "./../../assets/destination/image-mars.png";
 import Moon from "./../../assets/destination/image-moon.png";
 import Titan from "./../../assets/destination/image-titan.png";
 import Europa from "./../../assets/destination/image-europa.png";
-import H5 from "../../components/UI/H5/H5";
-import H2 from "../../components/UI/H2/H2";
-import Text from "../../components/UI/Text/Text";
-import H4 from "../../components/UI/H4/H4";
+
+import data from "./../../json/data";
+
+import "./destination.scss";
 
 const tabs = [
   { id: 1, name: "Moon" },

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+
 import Main from "../../components/Main/Main";
-import data from "./../../json/data";
-import vehicle from "./../../assets/technology/image-launch-vehicle-portrait.jpg";
-import Spaceport from "./../../assets/technology/image-spaceport-portrait.jpg";
-import capsule from "./../../assets/technology/image-space-capsule-portrait.jpg";
+import Text from "../../components/UI/Text/Text";
 import H5 from "../../components/UI/H5/H5";
 import H4 from "../../components/UI/H4/H4"
 import H3 from "../../components/UI/H3/H3";
-import Text from "../../components/UI/Text/Text";
+
+import vehicle from "./../../assets/technology/image-launch-vehicle-portrait.jpg";
+import capsule from "./../../assets/technology/image-space-capsule-portrait.jpg";
+import Spaceport from "./../../assets/technology/image-spaceport-portrait.jpg";
+
+import data from "./../../json/data";
+
 import "./technology.scss";
 
 const slides = [

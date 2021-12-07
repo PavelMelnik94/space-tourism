@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+
 import Main from "../../components/Main/Main";
-import data from "./../../json/data";
-import Douglas from "./../../assets/crew/image-douglas-hurley.png";
-import Mark from "./../../assets/crew/image-mark-shuttleworth.png";
-import Victor from "./../../assets/crew/image-victor-glover.png";
-import anousheh from "./../../assets/crew/image-anousheh-ansari.png";
 import H5 from "../../components/UI/H5/H5";
 import H4 from "../../components/UI/H4/H4"
 import H3 from "../../components/UI/H3/H3";
-import "./crew.scss";
 import Text from "../../components/UI/Text/Text";
+
+import anousheh from "./../../assets/crew/image-anousheh-ansari.png";
+import Douglas from "./../../assets/crew/image-douglas-hurley.png";
+import Mark from "./../../assets/crew/image-mark-shuttleworth.png";
+import Victor from "./../../assets/crew/image-victor-glover.png";
+
+import data from "./../../json/data";
+
+import "./crew.scss";
 
 const slides = [
   { id: 1, name: "Douglas Hurley" },

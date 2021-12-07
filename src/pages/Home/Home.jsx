@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
-import Main from "./../../components/Main/Main";
-import RoundButton from "./../../components/UI/RoundButton/RoundButton";
 import useSound from "use-sound";
-import boopSfx from "./../../assets/sound/main.mp3";
-import "./home.scss";
+
+import RoundButton from "./../../components/UI/RoundButton/RoundButton";
 import Text from "../../components/UI/Text/Text";
+import Main from "./../../components/Main/Main";
 import H1 from "../../components/UI/H1/H1";
 import H5 from "../../components/UI/H5/H5";
+
+import boopSfx from "./../../assets/sound/main.mp3";
+
+import "./home.scss";
 
 function Home({ children }) {
   const [play] = useSound(boopSfx);

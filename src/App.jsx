@@ -2,18 +2,17 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import Destination from "./pages/Destination/Destination";
-import Crew from "./pages/Crew/Crew";
-import Technology from "./pages/Technology/Technology";
-import NotFound from "./pages/NotFound";
 
-import "./App.css";
+import Home from "./pages/Home/Home";
+import Crew from "./pages/Crew/Crew";
+import NotFound from "./pages/NotFound";
+import Technology from "./pages/Technology/Technology";
+import Destination from "./pages/Destination/Destination";
+
 
 const App = () => {
   return (
     <div className="App" style={{ background: "#181818" }}>
-      {/* <Header className=''/> */}
       <Routes>
         <Route path="/" element={<Home children={<Header className="" />} />} />
         <Route
