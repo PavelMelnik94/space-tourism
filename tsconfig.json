@@ -17,13 +17,14 @@
 		"isolatedModules": true,
     "jsx": "react",
     "lib": [
-			"dom",
+      "dom",
 			"dom.iterable",
 		],
-  //   "include": [
-  //     "**/*.ts",
-  //     "**/*.tsx"
-  //   ],
+    "include": [
+      "import-img.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+    ],
   //   "exclude": [
   //     "node_modules"
   //   ],

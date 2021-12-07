@@ -2,7 +2,7 @@ import React from 'react'
 import { TypographyProps } from '../../../types/types';
 
 function H4({className, children, ...other}: TypographyProps):JSX.Element {
-    if (!children) null;
+    if (!children) console.error('missing children prop');
     
     return (
         <h4 {...other} className={`${className}`}>

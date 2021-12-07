@@ -6,20 +6,31 @@ import logo from "./../../assets/shared/logo.svg";
 
 import "./header.scss";
 
-const btnConstructor = [
+interface IHeader {
+  id: string,
+  name: string,
+  url: string
+}
+
+const btnConstructor: IHeader[] = [
   { id: "00", name: "home", url: "/" },
   { id: "01", name: "destination", url: "/destination" },
   { id: "02", name: "crew", url: "/crew" },
   { id: "03", name: "technology", url: "/technology" },
 ];
 
-function Header({ className }) {
-  const path = useLocation().pathname;
 
-const [mobile, setMobile] = useState(false);
-const [isOpen, setOpen] = useState(false)
+interface IHeaderProps {
+  className?: string
+}
 
-let detectMobile = window.screen.width
+function Header({ className }: IHeaderProps):JSX.ElementAttributesProperty {
+const path: string = useLocation().pathname;
+let detectMobile: number = window.screen.width
+
+const [mobile, setMobile] = useState<boolean>(false);
+const [isOpen, setOpen] = useState<boolean>(false)
+
 
 
 useEffect(() => {
@@ -46,7 +57,7 @@ if (mobile) {
 
    <div className={`hamburger-menu-wrapper ${isOpen ? ' ' : 'hidden' }`}> 
     <div className="hamburger-menu"> 
-    {btnConstructor.map((btn) => (
+    {btnConstructor.map((btn):JSX.Element => (
             <Link key={btn.id} to={btn.url}>
                 <div className='hamburger-menu__item'>
                 <span className="hamburger-menu__item--number">{`${btn.id} `}</span>
