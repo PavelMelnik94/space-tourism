@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Main from "../components/Main/Main";
-import data from "./../json/data";
+import Main from "../../components/Main/Main";
+import data from "./../../json/data";
 import "./destination.scss";
-import Mars from "./../assets/destination/image-mars.png";
-import Moon from "./../assets/destination/image-moon.png";
-import Titan from "./../assets/destination/image-titan.png";
-import Europa from "./../assets/destination/image-europa.png";
+import Mars from "./../../assets/destination/image-mars.png";
+import Moon from "./../../assets/destination/image-moon.png";
+import Titan from "./../../assets/destination/image-titan.png";
+import Europa from "./../../assets/destination/image-europa.png";
 
 const tabs = [
   { id: 1, name: "Moon" },
@@ -17,7 +17,7 @@ const tabs = [
 function Destination({ children }) {
   const res = data;
   const destinationPage = res.destinations;
-// eslint-disable-next-line
+  // eslint-disable-next-line
   const [allPlanets, setAllPlanets] = useState(destinationPage);
   const [planetInfo, setPI] = useState({
     name: "Moon",

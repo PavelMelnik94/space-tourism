@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Main from "../components/Main/Main";
-import data from "./../json/data";
-import vehicle from "./../assets/technology/image-launch-vehicle-portrait.jpg";
-import Spaceport from "./../assets/technology/image-spaceport-portrait.jpg";
-import capsule from "./../assets/technology/image-space-capsule-portrait.jpg";
+import Main from "../../components/Main/Main";
+import data from "./../../json/data";
+import vehicle from "./../../assets/technology/image-launch-vehicle-portrait.jpg";
+import Spaceport from "./../../assets/technology/image-spaceport-portrait.jpg";
+import capsule from "./../../assets/technology/image-space-capsule-portrait.jpg";
 
 import "./technology.scss";
 
@@ -27,7 +27,6 @@ function Technology({ children }) {
   const handle = {
     getTechnology: (e) => {
       let name = e.target.dataset.name;
-      console.log(name);
       let currentTechnology = technologyAll.find((el) => el.name === name);
       if (currentTechnology) {
         setTechnology(currentTechnology);

@@ -1,5 +1,5 @@
 .destination {
-  background-image: url(../assets/destination/background-destination-desktop.jpg);
+  background-image: url(./../../assets/destination/background-destination-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -69,7 +69,7 @@
   }
 
   @media (max-width: 574px) {
-    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    background-image: url(./../../assets/destination/background-destination-mobile.jpg);
     background-position: center;
     overflow: auto;
     .content {

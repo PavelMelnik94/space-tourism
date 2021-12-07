@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Main from "../components/Main/Main";
-import data from "./../json/data";
-import Douglas from "./../assets/crew/image-douglas-hurley.png";
-import Mark from "./../assets/crew/image-mark-shuttleworth.png";
-import Victor from "./../assets/crew/image-victor-glover.png";
-import anousheh from "./../assets/crew/image-anousheh-ansari.png";
+import Main from "../../components/Main/Main";
+import data from "./../../json/data";
+import Douglas from "./../../assets/crew/image-douglas-hurley.png";
+import Mark from "./../../assets/crew/image-mark-shuttleworth.png";
+import Victor from "./../../assets/crew/image-victor-glover.png";
+import anousheh from "./../../assets/crew/image-anousheh-ansari.png";
 import "./crew.scss";
 
 const slides = [
@@ -44,11 +44,11 @@ function Crew({ children }) {
         </div>
 
         <div className="content padding-crew">
-          <div id='slider' className="crew-slider">
+          <div id="slider" className="crew-slider">
             <h4 className="crew-slider__supheader">{member.role}</h4>
             <h3 className="crew-slider__header">{member.name}</h3>
             <p className="crew-slider__text text-basic">{member.bio}</p>
-            <div id='navigation' className="slider-navigation">
+            <div id="navigation" className="slider-navigation">
               {slides.map((slide) => (
                 <span
                   key={slide.id}
@@ -62,20 +62,21 @@ function Crew({ children }) {
             </div>
           </div>
           <div>
-          <img id='hero'
-            src={
-              member.name === "Douglas Hurley"
-                ? Douglas
-                : member.name === "Mark Shuttleworth"
-                ? Mark
-                : member.name === "Victor Glover"
-                ? Victor
-                : anousheh
-            }
-            alt="crew"
-            className="crew__image"
-          />
-          <hr className='crew__image_divider' />
+            <img
+              id="hero"
+              src={
+                member.name === "Douglas Hurley"
+                  ? Douglas
+                  : member.name === "Mark Shuttleworth"
+                  ? Mark
+                  : member.name === "Victor Glover"
+                  ? Victor
+                  : anousheh
+              }
+              alt="crew"
+              className="crew__image"
+            />
+            <hr className="crew__image_divider" />
           </div>
         </div>
       </Main>

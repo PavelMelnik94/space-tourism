@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Main from "../components/Main/Main";
-import RoundButton from "../components/UI/RoundButton";
+import Main from "./../../components/Main/Main";
+import RoundButton from "./../../components/UI/RoundButton/RoundButton";
 import useSound from "use-sound";
-import boopSfx from "./../components/Main/main.mp3";
+import boopSfx from "./../../assets/sound/main.mp3";
 import "./home.scss";
 
 function Home({ children }) {
