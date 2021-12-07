@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 
-import RoundButton from "./../../components/UI/RoundButton/RoundButton";
+import RoundButton from "../../components/UI/RoundButton/RoundButton";
 import Text from "../../components/UI/Text/Text";
-import Main from "./../../components/Main/Main";
+import Main from "../../components/Main/Main";
 import H1 from "../../components/UI/H1/H1";
 import H5 from "../../components/UI/H5/H5";
 
@@ -11,10 +11,14 @@ import boopSfx from "./../../assets/sound/main.mp3";
 
 import "./home.scss";
 
-function Home({ children }) {
+
+interface HomeProps {
+  children: React.ReactNode
+}
+
+function Home({ children }: HomeProps): JSX.Element {
   const [play] = useSound(boopSfx);
 
-  useEffect(() => {}, []);
 
   return (
     <>

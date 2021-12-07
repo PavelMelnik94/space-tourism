@@ -21,6 +21,7 @@
 			"dom.iterable",
 		],
     "include": [
+      "audio.d.ts",
       "import-img.d.ts",
       "**/*.ts",
       "**/*.tsx"
