@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Main from "../components/Main/Main";
 import RoundButton from "../components/UI/RoundButton";
+import useSound from "use-sound";
+import boopSfx from "./../components/Main/main.mp3";
 import "./home.scss";
 
 function Home({ children }) {
+  const [play] = useSound(boopSfx);
+
+  useEffect(() => {}, []);
 
   return (
     <>
-      <div className="home">
+      <div className="home" onClick={play}>
         {children}
-        <Main className='padding-home'>
+        <Main className="padding-home">
           <div className="home__holder">
             <div className="home__holder-content">
               <h5 className="home__holder-content--supheader">
