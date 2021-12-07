@@ -1,7 +1,9 @@
 import React, { useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "./../../assets/shared/logo.svg";
 import {Fade as Hamburger} from 'hamburger-react'
+
+import logo from "./../../assets/shared/logo.svg";
+
 import "./header.scss";
 
 const btnConstructor = [
