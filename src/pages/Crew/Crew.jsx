@@ -5,7 +5,11 @@ import Douglas from "./../../assets/crew/image-douglas-hurley.png";
 import Mark from "./../../assets/crew/image-mark-shuttleworth.png";
 import Victor from "./../../assets/crew/image-victor-glover.png";
 import anousheh from "./../../assets/crew/image-anousheh-ansari.png";
+import H5 from "../../components/UI/H5/H5";
+import H4 from "../../components/UI/H4/H4"
+import H3 from "../../components/UI/H3/H3";
 import "./crew.scss";
+import Text from "../../components/UI/Text/Text";
 
 const slides = [
   { id: 1, name: "Douglas Hurley" },
@@ -39,15 +43,15 @@ function Crew({ children }) {
       {children}
       <Main className="padding-destination">
         <div className="content-header ">
-          <h5 className="content-header--number">02</h5>
-          <h5>Meet your crew</h5>
+          <H5 className="content-header--number">02</H5>
+          <H5>Meet your crew</H5>
         </div>
 
         <div className="content padding-crew">
           <div id="slider" className="crew-slider">
-            <h4 className="crew-slider__supheader">{member.role}</h4>
-            <h3 className="crew-slider__header">{member.name}</h3>
-            <p className="crew-slider__text text-basic">{member.bio}</p>
+            <H4 className="crew-slider__supheader">{member.role}</H4>
+            <H4 className="crew-slider__header">{member.name}</H4>
+            <Text className="crew-slider__text">{member.bio}</Text>
             <div id="navigation" className="slider-navigation">
               {slides.map((slide) => (
                 <span
