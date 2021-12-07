@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//general
 export interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement> {
     className?: string,
     children?: React.ReactNode
@@ -12,4 +14,19 @@ export interface RoundButtonProps extends React.HTMLAttributes<HTMLDivElement> {
 export interface MainProps {
     className?: string,
     children?: React.ReactNode
+}
+
+
+
+//data json interface
+
+    //crew
+export interface CrewData {
+    name: string;
+    images?: {
+        png?: string;
+        webp?: string;
+    };
+    role: string;
+    bio: string;
 }

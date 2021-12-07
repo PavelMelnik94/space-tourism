@@ -11,31 +11,42 @@ import Douglas from "./../../assets/crew/image-douglas-hurley.png";
 import Mark from "./../../assets/crew/image-mark-shuttleworth.png";
 import Victor from "./../../assets/crew/image-victor-glover.png";
 
-import data from "./../../json/data";
+import data from "./../../json/data.json";
 
 import "./crew.scss";
+import { CrewData } from "../../types/types";
 
-const slides = [
+interface ISlides {
+  id: number,
+  name: string
+}
+const slides:ISlides[] = [
   { id: 1, name: "Douglas Hurley" },
   { id: 2, name: "Mark Shuttleworth" },
   { id: 3, name: "Victor Glover" },
   { id: 4, name: "Anousheh Ansari" },
 ];
 
-function Crew({ children }) {
+interface ISlidesProps {
+  children?: React.ReactNode
+}
+
+function Crew({ children }: ISlidesProps):JSX.Element {
   const res = data;
-  const crewPage = res.crew;
+  const crewPage: CrewData[] = res.crew;
   // eslint-disable-next-line
   const [crew, setCrew] = useState(crewPage);
-  const [member, setMember] = useState({
+  const [member, setMember] = useState<CrewData>({
     name: "Douglas Hurley",
     role: "Commander",
     bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
   });
 
+
+  // event - (e: React.SyntheticEvent<HTMLButtonElement>)
   const handle = {
-    getMember: (e) => {
-      let name = e.target.dataset.name;
+    getMember: (e: any): void => {
+      let name: string = e.target.dataset.name;
       let currentMember = crew.find((el) => el.name === name);
       if (currentMember) {
         setMember(currentMember);
@@ -57,7 +68,7 @@ function Crew({ children }) {
             <H3 className="crew-slider__header">{member.name}</H3>
             <Text className="crew-slider__text">{member.bio}</Text>
             <div id="navigation" className="slider-navigation">
-              {slides.map((slide) => (
+              {slides.map((slide): JSX.Element => (
                 <span
                   key={slide.id}
                   onClick={(e) => handle.getMember(e)}
