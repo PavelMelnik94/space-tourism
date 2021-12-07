@@ -50,7 +50,7 @@ function Crew({ children }) {
         <div className="content padding-crew">
           <div id="slider" className="crew-slider">
             <H4 className="crew-slider__supheader">{member.role}</H4>
-            <H4 className="crew-slider__header">{member.name}</H4>
+            <H3 className="crew-slider__header">{member.name}</H3>
             <Text className="crew-slider__text">{member.bio}</Text>
             <div id="navigation" className="slider-navigation">
               {slides.map((slide) => (

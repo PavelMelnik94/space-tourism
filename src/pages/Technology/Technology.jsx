@@ -4,7 +4,10 @@ import data from "./../../json/data";
 import vehicle from "./../../assets/technology/image-launch-vehicle-portrait.jpg";
 import Spaceport from "./../../assets/technology/image-spaceport-portrait.jpg";
 import capsule from "./../../assets/technology/image-space-capsule-portrait.jpg";
-
+import H5 from "../../components/UI/H5/H5";
+import H4 from "../../components/UI/H4/H4"
+import H3 from "../../components/UI/H3/H3";
+import Text from "../../components/UI/Text/Text";
 import "./technology.scss";
 
 const slides = [
@@ -39,8 +42,8 @@ function Technology({ children }) {
       {children}
       <Main className="padding-destination">
         <div className="content-header ">
-          <h5 className="content-header--number">03</h5>
-          <h5>SPACE LAUNCH 101</h5>
+          <H5 className="content-header--number">03</H5>
+          <H5>SPACE LAUNCH 101</H5>
         </div>
 
         <div className="content technology__content padding-technology">
@@ -56,26 +59,26 @@ function Technology({ children }) {
                     "technology-slider__nav--btn--active"
                   }`}
                 >
-                  <h4
+                  <H4
                     data-name={slide.name}
                     onClick={(e) => handle.getTechnology(e)}
                   >
                     {slide.id}
-                  </h4>{" "}
+                  </H4>{" "}
                 </span>
               ))}
             </div>
 
             <div className="technology-slider__content">
-              <h5 className="technology-slider__content-supheader subhead-h2">
+              <H5 className="technology-slider__content-supheader subhead-h2">
                 THE TERMINOLOGY…
-              </h5>
-              <h3 className="technology-slider__content-header">
+              </H5>
+              <H3 className="technology-slider__content-header">
                 {technology.name}
-              </h3>
-              <p className="technology-slider__content-text text-basic">
+              </H3>
+              <Text className="technology-slider__content-text">
                 {technology.description}
-              </p>
+              </Text>
             </div>
 
             <img
