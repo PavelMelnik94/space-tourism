@@ -10,30 +10,42 @@ import vehicle from "./../../assets/technology/image-launch-vehicle-portrait.jpg
 import capsule from "./../../assets/technology/image-space-capsule-portrait.jpg";
 import Spaceport from "./../../assets/technology/image-spaceport-portrait.jpg";
 
-import data from "./../../json/data";
+import data from "./../../json/data.json";
 
 import "./technology.scss";
+import { TechnologyData } from "../../types/types";
 
-const slides = [
+interface SlidesData {
+  id: number,
+  name: string
+}
+
+const slides: SlidesData[] = [
   { id: 1, name: "Launch vehicle" },
   { id: 2, name: "Spaceport" },
   { id: 3, name: "Space capsule" },
 ];
 
-function Technology({ children }) {
+interface SlidesDataProps {
+  children: React.ReactNode
+}
+
+function Technology({ children }: SlidesDataProps) {
   const res = data;
-  const technologyPage = res.technology;
+  const technologyPage: TechnologyData[] = res.technology;
   // eslint-disable-next-line
   const [technologyAll, setTechnologyAll] = useState(technologyPage);
-  const [technology, setTechnology] = useState({
+  const [technology, setTechnology] = useState<TechnologyData>({
     name: "Launch vehicle",
     description:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
   });
 
+
+// event - (e: React.SyntheticEvent<HTMLButtonElement>)
   const handle = {
-    getTechnology: (e) => {
-      let name = e.target.dataset.name;
+    getTechnology: (e: any) => {
+      let name: string = e.target.dataset.name;
       let currentTechnology = technologyAll.find((el) => el.name === name);
       if (currentTechnology) {
         setTechnology(currentTechnology);

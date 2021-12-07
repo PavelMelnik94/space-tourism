@@ -39,3 +39,15 @@ export interface DestinationData  {
     distance: string,
     travel: string,
 }
+
+
+    //technology 
+
+export interface TechnologyData {
+    name: string;
+    images?: {
+        portrait?: string;
+        landscape?: string;
+    };
+    description: string;
+}
