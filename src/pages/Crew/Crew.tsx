@@ -13,8 +13,9 @@ import Victor from "./../../assets/crew/image-victor-glover.png";
 
 import data from "./../../json/data.json";
 
-import "./crew.scss";
 import { CrewData } from "../../types/types";
+
+import "./crew.scss";
 
 interface ISlides {
   id: number,

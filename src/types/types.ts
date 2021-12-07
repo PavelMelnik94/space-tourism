@@ -22,11 +22,20 @@ export interface MainProps {
 
     //crew
 export interface CrewData {
-    name: string;
+    name: string,
     images?: {
-        png?: string;
-        webp?: string;
+        png?: string,
+        webp?: string,
     };
-    role: string;
-    bio: string;
+    role: string,
+    bio: string,
+}
+
+    //destination
+export interface DestinationData  {
+    name: string,
+    image?: {},
+    description: string,
+    distance: string,
+    travel: string,
 }

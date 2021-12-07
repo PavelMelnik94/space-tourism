@@ -11,23 +11,34 @@ import Moon from "./../../assets/destination/image-moon.png";
 import Titan from "./../../assets/destination/image-titan.png";
 import Europa from "./../../assets/destination/image-europa.png";
 
-import data from "./../../json/data";
+import data from "./../../json/data.json";
 
 import "./destination.scss";
+import { DestinationData } from "../../types/types";
 
-const tabs = [
+interface TabsData {
+  id: number,
+  name: string
+}
+
+const tabs: TabsData[] = [
   { id: 1, name: "Moon" },
   { id: 2, name: "Mars" },
   { id: 3, name: "Europa" },
   { id: 4, name: "Titan" },
 ];
 
-function Destination({ children }) {
+
+interface ITabsProps {
+  children: React.ReactNode
+}
+
+function Destination({ children }: ITabsProps): JSX.Element {
   const res = data;
-  const destinationPage = res.destinations;
+  const destinationPage: DestinationData[] = res.destinations;
   // eslint-disable-next-line
   const [allPlanets, setAllPlanets] = useState(destinationPage);
-  const [planetInfo, setPI] = useState({
+  const [planetInfo, setPI] = useState<DestinationData>({
     name: "Moon",
     description: `See our planet as you’ve never seen it before. A perfect
     relaxing trip away to help regain perspective and come back refreshed.
@@ -37,9 +48,11 @@ function Destination({ children }) {
     travel: "3 days",
   });
 
+
+  // event - (e: React.SyntheticEvent<HTMLButtonElement>)
   const handle = {
-    getPlanet: (e) => {
-      let name = e.target.innerHTML;
+    getPlanet: (e: any) => {
+      let name: string = e.target.innerHTML;
       let currentPlanet = allPlanets.find((el) => el.name === name);
       if (currentPlanet) {
         setPI(currentPlanet);
@@ -71,7 +84,7 @@ function Destination({ children }) {
           />
           <div className="destination__content__tab">
             <div className="destination__content__tab-nav">
-              {tabs.map((tab) => (
+              {tabs.map((tab): JSX.Element => (
                 <span
                   key={tab.id}
                   className={`destination__content__tab-nav__item j5  ${
